@@ -1,0 +1,21 @@
+{{>header}}
+<form class="row gy-2 gx-3 align-items-center" name="eliminar" action="/eliminar" method="post">
+	<div class="container">
+		<h2>Lista de Inscritos</h2>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead class="thead-color">
+					<th>Documento</th>
+					<th>Nombre</th>
+					<th>Correo</th>
+					<th>Teléfono</th>
+					<th>Eliminar</th>
+				</thead>
+				<tbody>
+					{{{verIns res}}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</form>
+{{>footer}}

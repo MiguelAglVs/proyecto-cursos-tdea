@@ -1,0 +1,15 @@
+{{>header}}
+<div class="container">
+	<h2>Incribirse</h2>
+	{{{mensaje}}}
+	{{!-- {{{inscribir documento nombre correo telefono nomCurso}}} --}}
+	<form class="row gy-2 gx-3 align-items-center" name="inscribir" action="/inscribir" method="post">
+			<div class="col-md-16 form-floating">
+					{{{listacursos resc}}}
+				<label class="form-label" lass="form-label" for="modalidad">Curso</label>
+			</div>
+		</div>
+		<br>
+		<input class="btn btn-success col-md-12" type="submit">
+	</form>
+	{{>footer}}

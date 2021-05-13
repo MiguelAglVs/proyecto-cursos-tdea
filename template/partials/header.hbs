@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0 minimum-scale=1.0">
+	<link rel="icon" type="image/png" href="/img/Logotipo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/estilo.css">
+	<title>{{titulo}}</title>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<img src="img/descarga.jpg" alt="imangen1">
+			<img src="img/gel2.jpg" alt="imangen1">
+		</header>
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="/">INICIO</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/intCursos">CURSOS</a>
+							</li>
+							{{#if sesion}}
+							<li class="nav-item">
+								<a class="nav-link" href="/crearCurso">CREAR CURSO</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/verCursos">VER CURSOS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/inscribir">INSCRIBIR</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/inscritos">VER INSCRITOS</a>
+							</li>
+							{{/if}}
+						</ul>
+						{{#if sesion}}
+						<div class="btn-group d-flex">
+							<button class="btn btn-outline-success btn-sm dropdown-toggle" type="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-user"></i>&nbsp;{{nom}}
+							</button>
+							<ul class="dropdown-menu navbar-nav">
+								<div class="container-sm">
+									<form action="/salir" method="get">
+										<button class="btn btn-danger btn-sm col-md-12" name="salir" type="submit"><i
+												class="fas fa-sign-out-alt"></i></button>
+									</form>
+								</div>
+							</ul>
+						</div>
+						{{else}}
+						<ul class="navbar-nav d-flex btn-group">
+							<li class="btn-group">
+								<a class="btn btn-outline-success btn-sm" href="/ingresar">SIGN IN</a>
+							</li>
+							<li class="btn-group">
+								<a class="btn btn-outline-success btn-sm" href="/registrarse">SIGN UP</a>
+							</li>
+						</ul>
+						{{/if}}
+					</div>
+				</div>
+			</nav>

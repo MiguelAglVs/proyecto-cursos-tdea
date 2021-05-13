@@ -1,0 +1,26 @@
+{{>header}}
+<div class="container">
+	<h2>{{titulo}}</h2>
+	<div class="table-responsive">
+		<table class="table table-striped table-hover">
+			<thead class="thead-color">
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Modalidad</th>
+				<th>Valor</th>
+				<th>Intencidad</th>
+				<th>Descripción</th>
+				<th>Estado</th>
+			</thead>
+			<tbody>
+				{{{listar res}}}
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<form class="row gy-2 gx-3 align-items-center" name="Modificar" action="/verCurso" method="post">
+			<input class="btn btn-success col-md-12" type="submit" value="Cambiar estado">
+		</form>
+	</div>
+</div>
+{{>footer}}

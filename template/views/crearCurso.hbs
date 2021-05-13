@@ -1,0 +1,42 @@
+{{>header}}
+<div class="container">
+	<h2>Crear</h2>
+	{{{mensaje}}}
+	<form class="row gy-2 gx-3 align-items-center" name="Crear curso" action="/crearCurso" method="post">
+		<div class="mb-3 row g-3">
+			<div class="col-md-6 form-floating">
+				<input class="form-control" type="number" min="1" name="idcurso" id="idcurso" required=""
+					placeholder="Ej: 1">
+				<label for="idCurso">Id del curso</label>
+			</div>
+			<div class="col-md-6 form-floating">
+				<input class="form-control" type="text" name="nombre" id="nombre" required=""
+					placeholder="Ej: Desarrollo web">
+				<label class="form-label" for="nombre">Nombre del curso</label>
+			</div>
+			<div class="col-md-6 form-floating">
+				<select class="form-control" id="modalidad" name="modalidad">
+					<option selected disabled>--SELECIONAR--</option>
+					<option value="virtual">Virtual</option>
+					<option value="precencial">Precensial</option>
+				</select>
+				<label class="form-label" class="form-label" for="modalidad">Modalidad</label>
+			</div>
+			<div class="col-md-6 form-floating">
+				<input class="form-control" type="number" min="0" name="valor" required="" placeholder="Ej: 1000000">
+				<label class="form-label" for="valor" id="valor">Valor del curso</label>
+			</div>
+			<div class="col-md-12 form-floating">
+				<input class="form-control" type="number" name="intencidad" id="intencidad" placeholder="Ej: 70">
+				<label class="form-label" for="intencidad" id="intencidad">Intencidad del curso</label>
+			</div>
+			<div class="col-md-12 form-floating">
+				<textarea class="texto form-control" name="descripcion" id="descripcion" required="" cols="30"
+					rows="1"></textarea>
+				<label class="form-label" for="descripcion" id="descripcion">Descripción del curso</label>
+			</div>
+		</div>
+		<input class="btn btn-success col-md-12" type="submit">
+	</form>
+</div>
+{{>footer}}

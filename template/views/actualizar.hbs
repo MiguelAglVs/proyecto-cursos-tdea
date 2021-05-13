@@ -1,0 +1,24 @@
+{{>header}}
+<form class="row gy-2 gx-3 align-items-center" name="actualizar" action="/actualizar" method="post">
+	<div class="container">
+		<h2>{{titulo}}</h2>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead class="thead-color">
+					<th>Id</th>
+					<th>Nombre</th>
+					<th>Modalidad</th>
+					<th>Valor</th>
+					<th>Intencidad</th>
+					<th>Descripción</th>
+					<th>Estado</th>
+					<th>Editar</th>
+				</thead>
+				<tbody>
+					{{{verCursos res}}}
+				<tbody>
+			</table>
+		</div>
+	</div>
+</form>
+{{>footer}}

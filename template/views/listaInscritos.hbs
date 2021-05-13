@@ -1,0 +1,24 @@
+{{>header}}
+	<div class="container">
+		<h2>Lista de Inscritos</h2>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead class="thead-color">
+					<th>Documento</th>
+					<th>Nombre</th>
+					<th>Correo</th>
+					<th>Teléfono</th>
+					<th>Curso</th>
+				</thead>
+				<tbody>
+					{{{listarInscritos res}}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="container">
+		<form class="row gy-2 gx-3 align-items-center" name="eliminar" action="/inscritos" method="post">
+			<input class="btn btn-success col-md-12" type="submit" value="Eliminar inscritos">
+		</form>
+	</div>
+{{>footer}}
